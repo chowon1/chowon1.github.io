@@ -1,0 +1,59 @@
+.gallery_section{
+    margin: 100px 0 100px 0;
+    height: 700px;
+}
+.gallery_section>h3{
+    font-size: 48px; text-align: center;
+    margin-bottom: 50px;
+}
+.main_img img{
+    width:250px; 
+    height:230px;
+    border-radius: 7px;
+}
+.main_img{ 
+width:250px; 
+height:230px;
+margin:10px; 
+float:left;
+padding: 20px;
+}
+.ImageBack>p{
+    padding-top: 40%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.main_img > .ImageFront{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    background:#cb2929; 
+    width:250px; 
+    height:230px;
+    margin-left: 8%;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+.main_img > .ImageBack{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    background: #ff5c5c; 
+    width:250px; 
+    height:230px; 
+    margin-left: 8%;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+.main_img:hover > .ImageFront{
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+
+.main_img:hover > .ImageBack{
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+.clear{
+clear:both;
+}
